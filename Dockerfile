@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
-RUN pip install --no-cache-dir \
+# RUN pip install --no-cache-dir \
+RUN pip install \
     transformers==4.33.3 \
     datasets==2.14.6 \
     librosa==0.10.1 \
@@ -26,7 +27,7 @@ WORKDIR /app
 COPY transcribe.py .
 
 # Switch back to the non-root user
-USER 1001
+# USER 1001
 
 # Command to run when the container starts
 CMD ["python", "transcribe.py"]

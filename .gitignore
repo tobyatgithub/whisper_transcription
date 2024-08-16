@@ -1,2 +1,4 @@
+# ignore all the audio input and text output
 *.mp3
 *.wmv
+*.txt
