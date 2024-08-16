@@ -1,7 +1,3 @@
-# docker build -t whisper-transcription .
-# docker run --gpus all -v %cd%:/app/audio whisper-transcription python transcribe.py /app/audio/s11.Pronunounce_workshop__11_.wmv
-# docker run --gpus all -v %cd%:/app/audio whisper-transcription python transcribe.py /app/audio
-
 import sys
 import whisper
 from pydub import AudioSegment
