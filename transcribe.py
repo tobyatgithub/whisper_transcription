@@ -50,6 +50,9 @@ if __name__ == "__main__":
     
     try:
         transcription, load_time, transcribe_time, load_memory, transcribe_memory = transcribe_audio(audio_file, handle)
+        output_file = os.path.splitext(audio_file)[0] + '.txt'
+        with open(output_file, 'w') as f:
+            f.write(transcription)
         print("Transcription:")
         print(transcription)
         print("\nPerformance metrics:")
