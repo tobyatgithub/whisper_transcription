@@ -17,7 +17,7 @@ def transcribe_audio(file_path, handle):
     # Load the Whisper model
     # Choose from (tiny, base, small, medium, large) 
     start_time = time.time()
-    model = whisper.load_model("base")
+    model = whisper.load_model("medium")
     load_time = time.time() - start_time
     load_memory = get_gpu_memory_usage(handle)
 
